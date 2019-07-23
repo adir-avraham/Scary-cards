@@ -6,8 +6,8 @@ class Character {
         this.id = `charactes_${Math.round(Math.random() * 999)}`;
         this.name = name;
         this.imageUrl = imageUrl
-        this.x = pos.x
-        this.y = pos.y
+        this.x = `${Math.round(Math.random() * 999)}px`;
+        this.y = `${Math.round(Math.random() * 700)}px`;
 
     }
 
