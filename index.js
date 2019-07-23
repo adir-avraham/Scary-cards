@@ -35,17 +35,12 @@ function drawHandler() {
 }
 
 
-function setPosition (){
-    character1.setPos();
-    character2.setPos();
-    character3.setPos();
-    character4.setPos();
-    character5.setPos();
-    character6.setPos();
-    character7.setPos();
-    draw(characters);
+function setPosition() {
+    for (let index = 0 ; index < characters.length; index++) {
+        characters[index].setPos();
+        draw(characters);
+    } 
 }
-
 
 
 
@@ -53,71 +48,29 @@ function setPosition (){
       for (let index = 0 ; index < characters.length; index++) {
           characters[index].setXpos(20);
           draw(characters);
-      }
-
-   
+      } 
   }
-
-//   function moveRight() {
-//     character1.setXpos(20);
-//     character2.setXpos(20);
-//     character3.setXpos(20);
-//     character4.setXpos(20);
-//     character5.setXpos(20);
-//     character6.setXpos(20);
-//     character7.setXpos(20);  
-//     draw(characters);
-//   }
 
 
   function moveLeft() {
-    character1.setXpos(-20);
-    character2.setXpos(-20);
-    character3.setXpos(-20);
-    character4.setXpos(-20);
-    character5.setXpos(-20);
-    character6.setXpos(-20);
-    character7.setXpos(-20);  
-    draw(characters);
-  }
-
-  function moveUp() {
-    character1.setYpos(-20);
-    character2.setYpos(-20);
-    character3.setYpos(-20);
-    character4.setYpos(-20);
-    character5.setYpos(-20);
-    character6.setYpos(-20);
-    character7.setYpos(-20);  
-    draw(characters);
-  }
-
-  function moveDown() {
-    character1.setYpos(20);
-    character2.setYpos(20);
-    character3.setYpos(20);
-    character4.setYpos(20);
-    character5.setYpos(20);
-    character6.setYpos(20);
-    character7.setYpos(20);  
-    draw(characters);
-  }
+    for (let index = 0 ; index < characters.length; index++) {
+        characters[index].setXpos(-20);
+        draw(characters);
+    } 
+}
 
 
+function moveUp() {
+    for (let index = 0 ; index < characters.length; index++) {
+        characters[index].setYpos(-20);
+        draw(characters);
+    } 
+}
 
-// function moveRight() {
-//     characters.forEach(function (character) {
-//        character.setXpos(20)
-//        draw(monsters);
-//     });
+function moveDown() {
+    for (let index = 0 ; index < characters.length; index++) {
+        characters[index].setYpos(20);
+        draw(characters);
+    } 
+}
 
-
-
-//     monster1.setXpos(20);
-//     draw(monsters);
-//   }
-  
-//   function moveLeft() {
-//     monster1.setXpos(-20);
-//     draw(monsters);
-//   }
