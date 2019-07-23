@@ -2,7 +2,7 @@
 
 class Character {
     // new ClassName = > constructor
-    constructor(name, imageUrl, pos) {
+    constructor(name, imageUrl) {
         this.id = `charactes_${Math.round(Math.random() * 999)}`;
         this.name = name;
         this.imageUrl = imageUrl
@@ -14,14 +14,9 @@ class Character {
     //behaviour
 
 
-    setPicture(pic) {
-        this.imageUrl = pic;
-    }
-
-    setXpos(xpos, ypos) {
-        // this.x = parseInt(this.x) + xpos + "px"
-        this.x = `${parseInt(this.x) + xpos}px`
-        this.y = `${Math.floor (Math.random()* + ypos)}px`; 
+    setPos() {
+        this.x = `${Math.round(Math.random() * 999)}px`;
+        this.y = `${Math.round(Math.random() * 700)}px`;
     }
 
 
@@ -32,11 +27,15 @@ class Character {
         img.src = this.imageUrl
         img.height = w;
         img.width = h;
+        img.style.borderRadius = "5%";
+        //img.style.border = "5px solid red";
         characterUI.append(img)
         characterUI.style.position = "absolute"
         characterUI.style.left = this.x
-        characterUI.style.top = this.y
+        characterUI.style.top = this.y  
+
         return characterUI;
     }
+
 
 }

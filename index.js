@@ -8,12 +8,9 @@ const character6 = new Character("Michael_myers", "Images/Michael_myers.jpg", { 
 const character7 = new Character("Samara", "Images/Samara.jpg", { x: "", y: "" })
 
 const characters = [];
-//
-characters.push(character1, character2, character3, character4, character5, character6, character7)
 
-for (let index = 0; index < characters.length; index++) {
+characters.push(character1, character2, character3, character4, character5, character6, character7);
 
-}
 
 characters.forEach(function (character) {
     console.log(character)
@@ -23,7 +20,6 @@ function draw(arr) {
     mainBoard.innerHTML = "";
     arr.forEach(function (character) {
         mainBoard.append(character.getCard(160, 200))
-
     });
 }
 
@@ -31,7 +27,22 @@ function draw(arr) {
 
 document.querySelector("#generate").addEventListener("click", drawHandler); 
 
+document.querySelector("#setPosition").addEventListener("click", setPosition);
+
 
 function drawHandler() {
     draw(characters);
 }
+
+
+function setPosition (){
+    character1.setPos();
+    character2.setPos();
+    character3.setPos();
+    character4.setPos();
+    character5.setPos();
+    character6.setPos();
+    character7.setPos();
+    draw(characters);
+}
+
